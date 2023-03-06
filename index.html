@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="css/master.css">
 
     <title>JS Campo Minato</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
     <body>
 
@@ -26,7 +27,7 @@
                     <option value="modeMid">Medium</option>
                     <option value="modeHard">Hard</option>
                 </select>
-                <div class="counter-wrapper">Score <span id="score"></span></div>
+                <div class="counter-wrapper">Your Score: <span id="score">0</span></div>
                 <button id="btnPlay" class="btn"><i class="fa-solid fa-play"></i> Play</button>
             </div>
         </header>
@@ -37,6 +38,7 @@
         
         <div id="overlay">
           <div class="overlay-container">
+                <div id="emoji"></div>
                 <h1 id="overlay-title"></h1>
                 <div class="caption">Click to try again.</div>
                 <div class="btn-box">

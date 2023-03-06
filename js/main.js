@@ -4,13 +4,12 @@ const domBtnPlay = document.getElementById('btnPlay');
 const domBtnTryAgain = document.getElementById('btnTryAgain');
 const domOverlay = document.getElementById('overlay');
 const domOverlayTitle = document.getElementById('overlay-title');
+const domEmoji = document.getElementById('emoji');
 
 
 // Pulsante PLAY
 domBtnPlay.addEventListener('click', function(){
-
    startNewGame();
-
 });
 
 // Pulsante TRY AGAIN
@@ -65,8 +64,6 @@ function loadGrid(gridSize, colNumber){
                 }
 
             }
-
-            
 
         });
 
@@ -124,9 +121,11 @@ function gameOver(allBombs){
 
         if(allBombs.includes(currentItem)){
             domAllBoxes[i].classList.add('bomb');
+            domAllBoxes[i].innerHTML = "&#128165";
         }
     }
 
+    domEmoji.innerHTML = "&#128553";
     domOverlayTitle.innerText = "YOU LOSE!";
     domOverlayTitle.classList.remove('win');
     domOverlayTitle.classList.add('lose');
@@ -134,6 +133,7 @@ function gameOver(allBombs){
 }
 
 function winner(){
+    domEmoji.innerHTML = "&#128081";
     domOverlayTitle.innerText = "YOU WIN!";
     domOverlayTitle.classList.remove('lose');
     domOverlayTitle.classList.add('win');

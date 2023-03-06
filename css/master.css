@@ -44,6 +44,10 @@ main{
     align-items: center;
 }
 
+#score{
+    color: var(--color-win);
+}
+
 .counter-wrapper{
     color: white;
 }
@@ -103,7 +107,8 @@ main{
 
 .box.bomb{
     background-color: var(--color-bomb);
-    animation-duration: 2s;
+    font-size: 3rem;
+    animation-duration: 1s;
     animation-name: tileDrop;
     z-index: 99;
 
@@ -124,7 +129,7 @@ main{
     top: 0;
     width: 100%;
     height: 100vh;
-    background-color: rgba(0,0,0,0.85);
+    background-color: rgba(0,0,0,0.90);
     color: white;
     text-align: center;
     z-index: 999;
@@ -135,6 +140,10 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+#emoji{
+    font-size: 5rem;
 }
 
 
@@ -149,6 +158,8 @@ main{
 #overlay-title.lose{
     color: var(--color-bomb);
 }
+
+
 
 @keyframes fontZoomin {
     0%{
@@ -182,11 +193,18 @@ main{
 }
 
 @keyframes tileDrop {
-    10%{
-        transform: scale(1.5);
+    0%{
+        font-size: 3rem;
+    }
+
+    60%{
+        font-size: 4rem;
+        transform: scale(1.4);
     }
 
     100%{
-       transform: scale(1);
+        font-size: 3rem;
     }
+
+
 }
