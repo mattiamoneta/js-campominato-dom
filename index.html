@@ -8,9 +8,14 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="css/master.css">
 
-    <title>Ja Campo Minato</title>
+    <title>JS Campo Minato</title>
 </head>
     <body>
 
@@ -21,6 +26,7 @@
                     <option value="modeMid">Medium</option>
                     <option value="modeHard">Hard</option>
                 </select>
+                <div class="counter-wrapper">Score <span id="score"></span></div>
                 <button id="btnPlay" class="btn"><i class="fa-solid fa-play"></i> Play</button>
             </div>
         </header>
@@ -29,6 +35,15 @@
             </div>
         </main>
         
+        <div id="overlay">
+          <div class="overlay-container">
+                <h1 id="overlay-title"></h1>
+                <div class="caption">Click to try again.</div>
+                <div class="btn-box">
+                    <button class="btn" id="btnTryAgain"><i class="fa-solid fa-arrow-rotate-right"></i> Try Again</button>
+                </div>
+          </div>
+        </div>
         <script type="text/javascript" src="./js/main.js"></script>
     </body>
 </html>
