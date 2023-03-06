@@ -1,0 +1,130 @@
+*,
+::after,
+::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --color-darkgrey: #1e1e1e;
+    --color-darkgrey-2x: #161616;
+    --color-darkgrey-3x: #292929;
+    --color-blue: #0074cc;
+    --color-azure: #66ace0;
+    --color-lightgray: #616161;
+}
+
+html{
+    font-family: monospace;
+}
+
+body{
+    background-color: var(--color-darkgrey);
+}
+
+header{
+    display: flex;
+    align-items: center;
+    height: 60px;
+    background-color: var(--color-darkgrey-2x);
+}
+
+main{
+    padding-top: 30px;
+}
+
+.container{
+    display: flex;
+    width: 992px;
+    margin: auto;
+    justify-content: space-between;
+}
+
+.form-select{
+    border-radius: 2px;
+    background-color: var(--color-darkgrey);
+    color: white;
+    font-family: monospace;
+    padding: 2px 20px;
+}
+
+.btn{
+    background-color: var(--color-blue) ;
+    border: 1px solid var(--color-azure);
+    color: white;
+    padding: 8px 25px;
+    border-radius: 10px;
+    transition: all .2s ease;
+}
+
+.btn:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 32px -6px rgba(0,0,0,0.75);
+    background-color: var(--color-azure);
+}
+
+#grid{
+    display: flex;
+    flex-wrap: wrap;
+    width: 802px;
+    margin: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid var(--color-lightgray);
+    box-shadow: 0px 0px 32px -6px rgba(0,0,0,0.75);
+    color: white;
+}
+
+.box{
+    text-align: center;
+    border: 1px solid var(--color-lightgray);
+    transition: all .1s ease;
+    background-color: var(--color-darkgrey-3x);
+}
+
+.box:hover{
+    cursor: pointer;
+}
+
+.box.active{
+    background-color: var(--color-blue);
+    animation-duration: .3s;
+    animation-name: fontZoomin;
+}
+
+#grid.hidden{
+    display: none;
+}
+
+
+@keyframes fontZoomin {
+    0%{
+        font-size: 1rem;
+    }
+
+    50% {
+        font-size: 1.5rem;
+        transform: rotate(5deg);
+    }
+
+    60% {
+        font-size: 1.5rem;
+        transform: rotate(5deg);
+    }
+
+    70% {
+        font-size: 1.5rem;
+        transform: rotate(-5deg);
+    }
+
+    80% {
+        font-size: 1.5rem;
+        transform: rotate(5deg);
+    }
+
+    100%{
+        font-size: 1rem;
+        transform: rotate(-5deg);
+    }
+}
