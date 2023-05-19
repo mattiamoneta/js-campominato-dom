@@ -26,7 +26,7 @@ Syntax: <a href="website"><img src="https://img.shields.io/badge/-LABEL-COLORHEX
 </p>
 
 Il progetto è una versione semplificata del famoso gioco Campo Minato. Interamente scritto in JavaScript puro, integra un counter per il punteggio e 3 livelli di difficoltà.
-
+Realizzato a scopo didattico per [Boolean](https://boolean.careers/).
 
 ## Tecnologie
 
